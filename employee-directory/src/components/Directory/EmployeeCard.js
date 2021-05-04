@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Row, Col, Image, Button } from 'react-bootstrap';
+import { Card, Row, Col, Image } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Directory.css';
 
@@ -36,14 +36,6 @@ export default function EmployeeCard(props) {
 							{result.email}
 						</Card.Text>
 					</Card.Body>
-					<Card.Footer>
-						<Button className="Card-BTN" variant="primary">
-							Hire
-						</Button>
-						<Button className="Card-BTN" variant="primary">
-							Reject
-						</Button>
-					</Card.Footer>
 				</Card>
 			))}
 		</>

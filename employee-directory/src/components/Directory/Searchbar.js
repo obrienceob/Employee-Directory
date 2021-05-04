@@ -6,7 +6,7 @@ export default function SearchBar(props) {
 		<form className="Search-Bar-Form">
 			<div className="Search-Bar-Div">
 				<label htmlFor="search">Search Directory:</label>
-				<input className="Form-Input" size="30" value={props.search} onChange={props.handleInputChange} name="search" type="text" placeholder="Search For An Employee" id="search" />
+				<input className="Form-Input" size="45" value={props.search} onChange={props.handleInputChange} name="search" type="text" placeholder="Search for an Employee Name, City, or Country" id="search" />
 
 				<button className="Form-BTN FBN-BTN" onClick={props.handleOrderByAgeAsc}>
 					Order By Age <i className="fas fa-sort-up"></i>

@@ -24,7 +24,8 @@ export default class Directory extends Component {
 		const value = event.target.value;
 		const resultsArr = this.state.results;
 		//Filtering the list to populate the new FilteredResults Array with names from the API that match what is being put in for the first name and last name using the OR operator
-		const searchedEmployeeList = resultsArr.filter((eName) => eName.name.first.toLowerCase().indexOf(value.toLowerCase()) !== -1 || eName.name.last.toLowerCase().indexOf(value.toLowerCase()) !== -1);
+		const searchedEmployeeList = resultsArr.filter((eName) => eName.name.first.toLowerCase().indexOf(value.toLowerCase()) !== -1 || eName.name.last.toLowerCase().indexOf(value.toLowerCase()) !== -1 ||
+        eName.location.country.toLowerCase().indexOf(value.toLowerCase()) !== -1 || eName.location.city.toLowerCase().indexOf(value.toLowerCase()) !== -1);
 		this.setState({
 			filteredResults: searchedEmployeeList,
 		});
@@ -60,7 +61,7 @@ export default class Directory extends Component {
 				<SearchBar handleInputChange={this.handleInputChange} searchEmployee={this.searchEmployee} handleOrderByAgeDesc={this.handleOrderByAgeDesc} handleOrderByAgeAsc={this.handleOrderByAgeAsc} />
 				<CardDeck>
 					<Container className="Card-Container" fluid>
-						<EmployeeCard filteredResults={this.state.filteredResults} />;
+						<EmployeeCard filteredResults={this.state.filteredResults} />
 					</Container>
 				</CardDeck>
 			</div>
