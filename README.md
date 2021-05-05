@@ -21,7 +21,7 @@ Here are pictures of the deployed application
 
 
 ## Usage
-Go to to use the application
+Go to https://obrienceob.github.io/Employee-Directory/ to use the application
 
 Search by typing in the Search Bar. Sort by age ascending or descending by clicking the buttons. 
 
